@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHandlers| 3</title>
+</head>
+<body onload="">
+    <h1>Events and Forms</h1>
+    <form action="">
+        <input type="text" id="status" value="Not over the link!">
+        <br>
+        <a href="" onmouseover="document.querySelector('#status').value = 'Over the link'">Hover the mouse over me</a>
+        <br>
+        <input type="text" class="status" value="Not over the link!">
+        <br>
+        <a href="" onmouseover="mouseHover()">Hover the mouse over me</a>
+    </form>
+</body>
+<script>
+    const mouseHover = () => {
+        document.querySelector('.status').value = 'Over the link'
+    }
+    
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHandlers|2</title>
+</head>
+<body>
+    <h1>Event Handlers in JS</h1>
+    <!-- create a btn element and add the onclick attribute -->
+    <button>Click Me</button>
+    <!-- this is what we want to change -->
+    <p>Try to change me ...</p>
+
+</body>
+<script>
+    const p = document.querySelector('p')
+    const btn = document.querySelector('button')
+
+    const changeText = () => {
+        p.textContent = 'I have changed ecause of an event!'
+    }
+
+    const alertText = () => {
+        alert('This is an alert!')
+    }
+
+    btn.onclick = changeText
+    // the alertText will override the changeText
+    btn.onclick = alertText
+
+
+</script>
+</html>
