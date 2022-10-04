@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ebola Patient Admission Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form
+        id="patientAdmission"
+        name="patientAdmission"
+        onsubmit="return false"
+      >
+        <h1>Ebola Patient Admission Form</h1>
+        <hr>
+        <br>
+        <h4>Complications on Admission</h4>
+        <br />
+        <fieldset>
+          <legend>Bleeding:</legend>
+          <div class="column">
+            <div class="row">
+              <input
+                type="radio"
+                name="bleeding"
+                autocomplete="off"
+                id="yes"
+                value="yes"
+                style="margin: 5px"
+              />
+              <label for="yes">Yes</label>
+              <input
+                type="radio"
+                name="bleeding"
+                autocomplete="off"
+                id="no"
+                value="no"
+                style="margin: 5px"
+              />
+              <label for="no">No</label>
+              <input
+                type="radio"
+                name="bleeding"
+                autocomplete="off"
+                id="unknown"
+                value="unknown"
+                style="margin: 5px"
+              />
+              <label for="unknown">Unknown</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Shock:</legend>
+          <div class="column">
+            <div class="row">
+              <input
+                type="radio"
+                name="shock"
+                autocomplete="off"
+                id="yes"
+                value="yes"
+                style="margin: 5px"
+              />
+              <label for="yes">Yes</label>
+              <input
+                type="radio"
+                name="shock"
+                autocomplete="off"
+                id="no"
+                value="no"
+                style="margin: 5px"
+              />
+              <label for="yes">No</label>
+              <input
+                type="radio"
+                name="shock"
+                autocomplete="off"
+                id="unknown"
+                value="unknown"
+                style="margin: 5px"
+              />
+              <span>Unknown</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Meningitis</legend>
+          <div class="column">
+            <div class="row">
+              <input
+                type="radio"
+                name="meningitis"
+                autocomplete="off"
+                id="yes"
+                value="yes"
+                style="margin: 5px"
+              />
+              <label for="yes">Yes</label>
+              <input
+                type="radio"
+                name="meningitis"
+                autocomplete="off"
+                id="no"
+                value="no"
+                style="margin: 5px"
+              />
+              <label for="yes">No</label>
+              <input
+                type="radio"
+                name="meningitis"
+                autocomplete="off"
+                id="unknown"
+                value="unknown"
+                style="margin: 5px"
+              />
+              <span>Unknown</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Confusion</legend>
+          <div class="column">
+            <div class="row">
+              <input type="radio" name="confusion" autocomplete="off" id="yes"
+              value="yes style="margin: 5px;" />
+              <label for="yes">Yes</label>
+              <input
+                type="radio"
+                name="confusion"
+                autocomplete="off"
+                id="no"
+                value="no"
+                style="margin: 5px"
+              />
+              <label for="yes">No</label>
+              <input
+                type="radio"
+                name="confusion"
+                autocomplete="off"
+                id="unknown"
+                value="unknown"
+                style="margin: 5px"
+              />
+              <span>Unknown</span>
+            </div>
+          </div>
+        </fieldset>
+        <br />
+
+        <h4>Treatment Information on Admission</h4>
+        <br />
+        <fieldset class="column">
+          <legend>Type | Dose | Route | Frequency</legend>
+
+          <div class="row">
+            <span>Antibacterial:</span>
+            <input
+              type="radio"
+              name="antibacterial"
+              autocomplete="off"
+              id="yes"
+              value="yes"
+              style="margin: 5px"
+            />
+            <label for="yes">Yes</label>
+            <input
+              type="radio"
+              name="antibacterial"
+              autocomplete="off"
+              id="no"
+              value="no"
+              style="margin: 5px"
+            />
+            <label for="yes">No</label>
+          </div>
+
+          <div class="row">
+            <span>Specify:</span>
+            <input
+              type="checkbox"
+              name="amoxicilin"
+              id="specify"
+              style="margin: 5px"
+            />
+            <label for="amoxicilin">Amoxicilin</label>
+            <input
+              type="checkbox"
+              name="ceftriaxone "
+              id="specify"
+              style="margin: 5px"
+            />
+            <label for="ceftriaxone ">Ceftriaxone </label>
+            <input
+              type="checkbox"
+              name="cefixime"
+              id="specify"
+              style="margin: 5px"
+            />
+            <label for="cefixime">Cefixime</label>
+            <input
+              type="checkbox"
+              name="other-specify"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="other-specify">Other</label>
+          </div>
+
+          <div class="row">
+            <span>Route:</span>
+            <input
+              type="checkbox"
+              name="Intravenous"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="Intravenous">Intravenous</label>
+            <input
+              type="checkbox"
+              name="oral"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="oral">Oral</label>
+          </div>
+
+          <div class="row">
+            <span>Dose:</span>
+            <input
+              type="text"
+              name="doseAntibac"
+              autocomplete="off"
+              id="dose"
+              class="input-field"
+              onblur="checkDoseAntibac()"
+            />
+            <small></small>
+          </div>
+
+          <div class="row">
+            <span>Frequency:</span>
+            <input
+              type="text"
+              name="frequencyAntibac"
+              autocomplete="off"
+              id="frequency"
+              class="input-field"
+              onblur="checkFrequencyAntibac()"
+            />
+            <small></small>
+          </div>
+
+          <hr />
+          <div class="row">
+            <span>Antimalarial:</span>
+            <input
+              type="radio"
+              name="antimalarial"
+              autocomplete="off"
+              id="yes"
+              value="yes"
+              style="margin: 5px"
+            />
+            <label for="yes">Yes</label>
+            <input
+              type="radio"
+              name="antimalarial"
+              autocomplete="off"
+              id="no"
+              value="no"
+              style="margin: 5px"
+            />
+            <label for="yes">No</label>
+          </div>
+
+          <div class="row">
+            <span>Specify:</span>
+            <input
+              type="checkbox"
+              name="artesunate"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="artesunate">Artesunate</label>
+            <input
+              type="checkbox"
+              name="arthemeter"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="arthemeter">Arthemeter</label>
+            <input
+              type="checkbox"
+              name="lumefantrine/amodiaquine"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="lumefantrine/amodiaquine"
+              >Lumefantrine/Amodiaquine</label
+            >
+          </div>
+
+          <div class="row">
+            <label for="other">Other:</label>
+            <input
+              type="text"
+              name="other"
+              id="other"
+              class="input-field"
+              onblur="checkOther()"
+            />
+            <small></small>
+          </div>
+
+          <div class="row">
+            <span>Route:</span>
+            <input
+              type="checkbox"
+              name="Intravenous"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="Intravenous">Intravenous</label>
+            <input
+              type="checkbox"
+              name="oral"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="oral">Oral</label>
+          </div>
+
+          <div class="row">
+            <span>Dose:</span>
+            <input
+              type="text"
+              name="doseAntima"
+              autocomplete="off"
+              id="dose"
+              class="input-field"
+              onblur="checkDoseAntima()"
+            />
+            <small></small>
+          </div>
+
+          <div class="row">
+            <span>Frequency:</span>
+            <input
+              type="text"
+              name="frequencyAntima"
+              autocomplete="off"
+              id="frequency"
+              class="input-field"
+              onblur="checkFrequencyAntima()"
+            />
+            <small></small>
+          </div>
+          <hr />
+
+          <div class="row">
+            <span>Ebola experimental treatment:</span>
+            <input
+              type="radio"
+              name="eet"
+              autocomplete="off"
+              id="yes"
+              value="yes"
+              style="margin: 5px"
+              onclick="displayOptions()"
+            />
+            <label for="yes">Yes</label>
+            <input
+              type="radio"
+              name="eet"
+              autocomplete="off"
+              id="no"
+              value="no"
+              style="margin: 5px"
+            />
+            <label for="yes">No</label>
+          </div>
+
+          <div class="row wrap hidden" id="ifYes">
+            <span>Indicate if yes:</span>
+            <input
+              type="checkbox"
+              name="zmapp"
+              id="ifYes"
+              style="margin: 5px"
+            />
+            <label for="zmapp">ZMapp</label>
+            <input
+              type="checkbox"
+              name="remdesvir"
+              id="ifYes"
+              style="margin: 5px"
+            />
+            <label for="remdesvir">Remdesivir(GS-5734)</label>
+            <input
+              type="checkbox"
+              name="REGN3470-3471-3479"
+              id="ifYes"
+              style="margin: 5px"
+            />
+            <label for="REGN3470-3471-3479">REGN3470-3471-3479</label>
+            <input
+              type="checkbox"
+              name="favipiravir"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="favipiravir">Favipiravir</label>
+            <input
+              type="checkbox"
+              name="mAb114"
+              id="Specify"
+              style="margin: 5px"
+            />
+            <label for="mAb114">mAb114</label>
+          </div>
+        </fieldset>
+        <br />
+
+        <label for="completed" class="bold">Form completed by:</label>
+        <div class="row">
+          <input
+            type="text"
+            name="completed"
+            id="completed"
+            autocomplete="off"
+            class="input-field"
+            onblur="checkCompletedBy()"
+          />
+        </div>
+
+        <div class="row">
+          <input
+            name="submit"
+            type="submit"
+            value="Submit Form"
+            class="button"
+            onclick=""
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="./ebolaform.js"></script>
+</html>
